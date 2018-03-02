@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+<h:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+	<title>Next Question</title>
+</h:head>
+
+<h:body>
+	<h1>#{nav.category} Trivia Quiz!</h1>
+	<h:form>
+
+		<h:outputText rendered="#{nav.correct}" value="That is right!"></h:outputText>
+		<h:outputText rendered="#{!nav.correct}"
+			value="Sorry, the correct answer is: #{nav.oldAnswer}"></h:outputText>
+
+		<br></br><h:outputText value="Your score is #{nav.score} out of 4"></h:outputText>
+
+
+		<h3>Here is your next question:</h3>
+		<h3>#{nav.question}</h3>
+
+		<h:inputText value="#{nav.userInput}"></h:inputText>
+
+		<h:commandButton value="Check Answer" action="#{nav.checkAnswer}"></h:commandButton>
+
+	</h:form>
+
+	<f:view>
+
+	</f:view>
+
+</h:body>
+
+</html>

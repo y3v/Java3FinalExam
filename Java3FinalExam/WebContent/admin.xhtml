@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+<h:head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"/>
+<title>Admin</title>
+</h:head>
+
+<h:body>
+
+<h1>Time to add your own questions!</h1>
+
+<h:form>
+	<h:outputLabel value="Question:&nbsp;&nbsp;"></h:outputLabel>
+	<h:inputText value="#{admin.question}"></h:inputText><br></br><br></br>
+	
+	<h:outputLabel value="Answer:&nbsp;&nbsp;&nbsp;&nbsp;"></h:outputLabel>
+	<h:inputText value="#{admin.answer}"></h:inputText><br></br><br></br>
+	
+	<h:commandButton action="#{admin.addQuestion('comp')}" value="Add to Computer Science">
+	</h:commandButton>&nbsp;
+	<h:commandButton action="#{admin.addQuestion('math')}"  value="Add to Mathematics">
+	</h:commandButton>&nbsp;
+	<h:commandButton action="#{admin.addQuestion('physics')}" value="Add to Physics">
+	</h:commandButton>&nbsp;
+	<h:commandButton action="#{admin.addQuestion('astronomy')}" value="Add to Astronomy">
+	</h:commandButton><br></br><br></br>
+	
+	<h:commandButton action="index.xhtml?faces-redirect=true" value="Back to main">
+	</h:commandButton>
+</h:form>
+
+<f:view>
+
+</f:view>
+
+</h:body>
+
+</html>
